@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/product-renders/brand-original.png" alt="BlockNet — official red and black shield logo" width="500">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/blocknet-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/product-renders/brand-original.png">
+    <img src="assets/product-renders/brand-original.png" alt="BlockNet — official shield logo" width="500">
+  </picture>
 </p>
 
 <h1 align="center">BlockNet — Interactive Network Dashboard</h1>

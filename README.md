@@ -85,20 +85,22 @@ This is a plain static HTML/CSS/JS demo, so **there is no npm install, build fra
 ## Project structure
 
 ```text
-BlockNet-Website/
-├── index.html                # All four dashboards and page navigation
-├── styles.css                # Mobile, desktop, theme and model-specific layouts
-├── app.js                    # Live simulation, model switching and demo controls
-├── favicon.svg               # Existing SVG icon fallback\n├── assets/brand/blocknet-icon.png # Cropped original shield used by the site
-├── .nojekyll                 # Static GitHub Pages support
+BlockNet/
+├── index.html                    # Responsive interactive dashboard
+├── styles.css                    # Desktop, mobile and theme layouts
+├── app.js                        # Local simulated demo data and controls
+├── favicon.svg                   # Legacy simple icon
 ├── README.md
 ├── assets/
-│   ├── brand/                # Brand shield icon cropped from official source image\n│   ├── previews/             # Screenshots of each model, desktop and mobile
-│   └── product-renders/      # Device, logo and packaging concept artwork
+│   ├── brand/
+│   │   └── blocknet-icon.png     # Exact shield cropped from original logo
+│   ├── previews/                 # Dashboard screenshots
+│   └── product-renders/          # Original concept images and full brand logo
 └── docs/
-    ├── BlockNet_Business_Plan_2026.docx # Original source specification
+    ├── BlockNet_Business_Plan_2026.docx
+    ├── artwork-index.md          # Linked gallery of original assets
     ├── implementation-notes.md
-    └── references/           # Provided design and change-request images
+    └── references/               # Source design references
 ```
 
 ## Planning source and caveats

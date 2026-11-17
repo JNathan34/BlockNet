@@ -1,4 +1,9 @@
-# BlockNet — Interactive Network Dashboard
+<p align="center">
+  <img src="assets/product-renders/brand-original.png" alt="BlockNet — official red and black shield logo" width="500">
+</p>
+
+<h1 align="center">BlockNet — Interactive Network Dashboard</h1>
+<p align="center"><strong>Mini · Lite · Home · Pro</strong><br>Local DNS filtering hardware concepts and an interactive dashboard demonstration</p>
 
 A polished, responsive **BlockNet Mini / Lite / Home / Pro dashboard prototype**, based on the BlockNet business plan and supplied UI mockups. The site works on desktop, tablet and mobile, with a live-looking simulation generated entirely inside your browser.
 
@@ -17,6 +22,16 @@ A polished, responsive **BlockNet Mini / Lite / Home / Pro dashboard prototype**
 | Mobile Pro | Pro dark mode |
 |:---:|:---:|
 | ![Mobile Pro](assets/previews/pro-mobile.png) | ![Pro dark mode](assets/previews/pro-dark-desktop.png) |
+
+## Device artwork
+
+The following are **concept renders**, not photographs of manufactured products. All images below are from the supplied BlockNet business plan.
+
+| Mini | Lite | Home | Pro |
+|:---:|:---:|:---:|:---:|
+| ![BlockNet Mini concept](assets/product-renders/mini.jpg) | ![BlockNet Lite concept](assets/product-renders/lite.jpg) | ![BlockNet Home concept](assets/product-renders/home.jpg) | ![BlockNet Pro concept](assets/product-renders/pro.jpg) |
+
+See [all existing project artwork](docs/artwork-index.md) for packaging concepts, accessories, dashboard previews and the original brand image.
 
 ## Start the demo
 
@@ -55,14 +70,17 @@ This is a *responsive website*, not a downloadable Android or iOS app. The futur
 - CSV exports and printable HTML demo reports on the advanced model views.
 - Local-only static files, no framework, build tools, account or server required.
 
-## GitHub Pages deployment
+## Deploy on Cloudflare Pages
 
-1. Create a new GitHub repository (suggested name: `BlockNet-Website`).
-2. Upload the contents of this folder with `index.html` at the repository root.
-3. Go to **Settings → Pages**, choose **Deploy from a branch**, `main` and `/(root)`, and save.
-4. The deployed site will be a **public demonstration only**; it will not connect to DNS hardware.
+This is a plain static HTML/CSS/JS demo, so **there is no npm install, build framework or required build step**.
 
-The GitHub Pages steps apply after a repository is created and Pages is enabled; uploading the files alone does not publish a website.
+1. Open [Cloudflare Workers & Pages](https://dash.cloudflare.com/) and choose **Create application → Pages → Import an existing Git repository**.
+2. Connect GitHub and choose **`JNathan34/BlockNet`**.
+3. Use **`main`** as the production branch; select **None** for the framework preset.
+4. Set **Build command** to **`exit 0`** (or leave blank); **Build output directory** to **`.`**, the repository root containing `index.html`.
+5. Deploy, then use the assigned `*.pages.dev` URL. Subsequent pushes to `main` deploy automatically after the repository is connected.
+
+> Cloudflare Pages hosts this **simulated dashboard**, not DNS filtering or a customer shop. The separate BlockNet storefront, subscription billing, physical appliances and native Home/Pro app still require development. See [Cloudflare's static HTML guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/).
 
 ## Project structure
 
@@ -71,11 +89,11 @@ BlockNet-Website/
 ├── index.html                # All four dashboards and page navigation
 ├── styles.css                # Mobile, desktop, theme and model-specific layouts
 ├── app.js                    # Live simulation, model switching and demo controls
-├── favicon.svg               # No-check shield logo
+├── favicon.svg               # Existing SVG icon fallback\n├── assets/brand/blocknet-icon.png # Cropped original shield used by the site
 ├── .nojekyll                 # Static GitHub Pages support
 ├── README.md
 ├── assets/
-│   ├── previews/             # Screenshots of each model, desktop and mobile
+│   ├── brand/                # Brand shield icon cropped from official source image\n│   ├── previews/             # Screenshots of each model, desktop and mobile
 │   └── product-renders/      # Device, logo and packaging concept artwork
 └── docs/
     ├── BlockNet_Business_Plan_2026.docx # Original source specification

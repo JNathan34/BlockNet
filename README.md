@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center">BlockNet — Interactive Network Dashboard</h1>
+<p align="center"><a href="https://blocknetdash.pages.dev/"><strong>🌐 Open the live BlockNet dashboard demo</strong></a></p>
 <p align="center"><strong>Mini · Lite · Home · Pro</strong><br>Local DNS filtering hardware concepts and an interactive dashboard demonstration</p>
 
 A polished, responsive **BlockNet Mini / Lite / Home / Pro dashboard prototype**, based on the BlockNet business plan and supplied UI mockups. The site works on desktop, tablet and mobile, with a live-looking simulation generated entirely inside your browser.

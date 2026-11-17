@@ -75,3 +75,17 @@ body.basic-mode .mobile-shortcuts .shortcut-row[data-page="security"]{display:no
 .brand-home .brand-wordmark{color:#0d1117}
 .brand-home .brand-red{color:#d30f31}
 body.dark .brand-home .brand-shield,body.dark .brand-home .brand-wordmark{color:#f5f7fa}
+
+
+/* Fix oversized gap between the clickable brand shield and wordmark. */
+.sidebar-brand.brand-home{align-self:flex-start;width:max-content;max-width:none;justify-content:flex-start;gap:4px}
+.brand-home{display:inline-flex;align-items:center;justify-content:flex-start;gap:4px}
+.brand-home .brand-shield{flex:0 0 38px;width:38px;height:39px;margin:0;padding:0}
+.brand-home .brand-wordmark{flex:0 0 auto;margin:0;padding:0}
+@media (min-width:768px) and (max-width:1270px){
+  .sidebar-brand.brand-home .brand-shield{flex-basis:33px;width:33px;height:35px}
+}
+@media (max-width:767px){
+  .mobile-header .brand-home{gap:4px}
+  .mobile-header .brand-home .brand-shield{flex-basis:34px;width:34px;height:36px}
+}

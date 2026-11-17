@@ -14,6 +14,15 @@ A polished, responsive **BlockNet Mini / Lite / Home / Pro dashboard prototype**
 
 > **Interactive concept — not a real ad blocker.** No real network is monitored, no DNS requests are intercepted, and no physical BlockNet device is connected. Statistics, connected clients, logs, security events, update statuses and firmware versions are sample data. Do not use this demo to claim verified protection, manufacturing readiness or product availability.
 
+## Business plan — November 2026
+
+Read the complete **47-page BlockNet Business & Product Plan**, including the four device models, manufacturing, pricing, product designs and **BlockNet Flex** monthly subscriptions.
+
+- **[Download the Word business plan (.docx)](docs/BlockNet_Business_Plan_2026.docx)** — original, editable Word document.
+- **[View / download the PDF business plan (.pdf)](docs/BlockNet_Business_Plan_2026.pdf)** — generated from the same Word document using the [GitHub PDF export workflow](.github/workflows/export-business-plan-pdf.yml).
+
+Both formats are planning documents; products, prices and diagrams are concepts, not confirmed product availability.
+
 ## Preview
 
 | Mini | Lite |

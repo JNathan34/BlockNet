@@ -66,3 +66,12 @@ body.basic-mode .mobile-shortcuts .shortcut-row[data-page="security"]{display:no
  body.basic-mode .mobile-shortcuts{display:grid;grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:390px){.basic-domain-row{grid-template-columns:minmax(0,1fr) 62px 56px;gap:6px}}
+
+
+/* Official BlockNet header branding: lossless vector shield, no clipping or raster scaling. */
+.brand-home{appearance:none;background:transparent;border:0;font:inherit;text-align:left;cursor:pointer;color:inherit}
+.brand-home:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.brand-home .brand-shield{display:block;overflow:visible;color:#0d1117;stroke:none;flex-shrink:0}
+.brand-home .brand-wordmark{color:#0d1117}
+.brand-home .brand-red{color:#d30f31}
+body.dark .brand-home .brand-shield,body.dark .brand-home .brand-wordmark{color:#f5f7fa}

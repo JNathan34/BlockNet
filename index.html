@@ -19,6 +19,11 @@
   <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18M6 10h12m-9 5h6m-4 5h2"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 3v6c0 5.1-3 8.7-8 11-5-2.3-8-5.9-8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="i-shield-half" viewBox="0 0 64 64"><path d="M32 4 53 12v17c0 14-8.6 23.2-21 30C19.6 52.2 11 43 11 29V12z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M32 14 44 19v11c0 8.6-4.5 14.4-12 19V14Z" fill="currentColor"/></symbol>
+  <!-- Official BlockNet-style blocked shield, traced from the original high-resolution artwork. -->
+  <symbol id="i-brand-blocknet" viewBox="180 100 453 505">
+    <path fill="currentColor" d="M397,116 L197,197 L196,219 L197,367 L200,385 L209,415 L225,449 L239,471 L255,491 L294,529 L341,562 L396,591 L398,590 L398,538 L356,516 L315,485 L283,450 L261,413 L250,382 L246,362 L246,231 L397,170 L399,168 L399,118Z"/>
+    <path fill="#d30f31" d="M478,308 L488,329 L491,344 L491,359 L484,386 L469,409 L460,418 L444,429 L429,435 L414,438 L385,436 L360,425Z M447,277 L449,280 L332,396 L324,382 L321,372 L319,343 L325,320 L338,298 L350,286 L366,275 L391,267 L419,267Z M393,226 L365,232 L339,244 L321,257 L310,268 L293,292 L285,310 L279,333 L278,364 L282,385 L294,414 L308,434 L324,450 L341,462 L366,473 L388,478 L413,479 L440,474 L466,463 L480,454 L503,432 L523,399 L530,375 L532,347 L528,320 L519,296 L505,274 L491,259 L471,244 L445,232 L417,226Z M417,116 L413,117 L414,170 L564,231 L564,362 L555,396 L542,424 L528,446 L511,467 L490,488 L459,512 L413,538 L414,591 L460,568 L496,545 L532,516 L561,486 L582,457 L599,425 L609,399 L614,379 L617,353 L616,197Z"/>
+  </symbol>
   <symbol id="i-chart" viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></symbol>
   <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 0 0-14-3L3 8m0-5v5h5M4 16a8 8 0 0 0 14 3l3-3m0 5v-5h-5"/></symbol>
   <symbol id="i-settings" viewBox="0 0 24 24"><path d="M9.7 2h4.6l.6 2.4 1.6.7 2.1-1.3 3.2 3.2-1.3 2.1.7 1.6L23 11v4l-2.4.6-.7 1.6 1.3 2.1-3.2 3.2-2.1-1.3-1.6.7-.6 2.4H9.7l-.6-2.4-1.6-.7-2.1 1.3-3.2-3.2 1.3-2.1-.7-1.6L.4 15v-4l2.4-.6.7-1.6-1.3-2.1 3.2-3.2 2.1 1.3 1.6-.7z" transform="translate(0 -1) scale(1 .95)"/><circle cx="12" cy="12" r="3"/></symbol>
@@ -54,10 +59,10 @@
 
 <div class="app-shell" id="app-shell">
   <aside class="sidebar" aria-label="Main navigation">
-    <div class="brand sidebar-brand">
-      <img class="brand-shield" src="assets/brand/blocknet-icon.png" alt="" aria-hidden="true">
+    <button type="button" class="brand sidebar-brand brand-home" data-page="overview" aria-label="BlockNet — return to Overview">
+      <svg class="brand-shield" viewBox="180 100 453 505" aria-hidden="true"><use href="#i-brand-blocknet"/></svg>
       <div class="brand-wordmark"><span>Block<span class="brand-red">Net</span></span><small data-model-wordmark>PRO</small></div>
-    </div>
+    </button>
     <nav class="sidebar-nav" id="sidebar-nav">
       <button class="nav-btn active" data-page="overview"><svg class="ico fill-ico"><use href="#i-home"/></svg><span>Overview</span></button>
       <button class="nav-btn" data-page="devices"><svg class="ico"><use href="#i-monitor"/></svg><span>Devices</span></button>
@@ -75,7 +80,7 @@
 
   <main class="main-content">
     <header class="mobile-header">
-      <div class="brand"><img class="brand-shield" src="assets/brand/blocknet-icon.png" alt="" aria-hidden="true"><div class="brand-wordmark"><span>Block<span class="brand-red">Net</span></span><small data-model-wordmark>PRO</small></div></div>
+      <button type="button" class="brand brand-home" data-page="overview" aria-label="BlockNet — return to Overview"><svg class="brand-shield" viewBox="180 100 453 505" aria-hidden="true"><use href="#i-brand-blocknet"/></svg><div class="brand-wordmark"><span>Block<span class="brand-red">Net</span></span><small data-model-wordmark>PRO</small></div></button>
       <span class="mobile-demo-label"><span class="demo-pulse"></span> DEMO DATA</span><button class="icon-button" aria-label="Open settings" data-page="settings"><svg class="ico"><use href="#i-settings"/></svg></button>
     </header>
     <div class="content-header">

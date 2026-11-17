@@ -1,0 +1,30 @@
+name: Restore complete BlockNet business plan
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/.parts/**'
+      - 'scripts/assemble_business_plan.py'
+      - '.github/workflows/assemble-business-plan.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out BlockNet
+        uses: actions/checkout@v4
+      - name: Verify and reassemble original Word file
+        run: python3 scripts/assemble_business_plan.py
+      - name: Commit complete Word file
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/BlockNet_Business_Plan_2026.docx
+          if git diff --cached --quiet; then
+            echo 'Business plan is already up to date.'
+          else
+            git commit -m 'Add complete 47-page BlockNet business plan'
+            git push
+          fi
